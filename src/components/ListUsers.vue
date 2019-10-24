@@ -2,7 +2,7 @@
   
 <template>
     <div>
-        <h1> Users </h1>
+        <h3> Users </h3>
         <ul class="list-group">
             <li v-for="(user, index ) of users" :key="user.id" @click="aumentar(index)"
                 class="list-group-item d-flex justify-content-between align-items-center">
@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style scoped>
-    div h1 {
+    div h3 {
         color: white;
         text-align: center;
     }
