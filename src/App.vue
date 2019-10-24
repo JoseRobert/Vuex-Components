@@ -1,28 +1,42 @@
+// App.vue
+// Inyecta componente (padre), sobre el index.html principal 'container Ej. id='app' (reemplaza)
+
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class='container misClases'>
+    <Cabecera></Cabecera>
+    <!-- <Lista></Lista> -->
+    <ListUsers></ListUsers>
+    <AgregaItm></AgregaItm>
+    <!-- <button class='btn btn-primary m-2' @click='reinicia'>Reinicia</button> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+console.log('App.vue');
+import Cabecera from './components/Cabecera.vue'
+// import Lista from './components/Lista.vue'
+import ListUsers from './components/ListUsers.vue'
+import AgregaItm from './components/Agrega-Itm.vue'
+
+
+// App.vue
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    HelloWorld
-  }
+    Cabecera,
+    // Lista,
+    AgregaItm,
+    ListUsers
+
+  },
+  computed: {},
+  methods: {}
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scope >
+  body {
+    background-color: cornflowerblue;
+  }
 </style>
